@@ -4,7 +4,7 @@ class CreateLocations < ActiveRecord::Migration[7.0]
       t.integer :id
       t.float :latitude, :precision => 10, :scale => 6
       t.float :longitude, :precision => 10, :scale => 6
-      t.text :Name
+      t.string :title
       t.text :address
       t.string :city
       t.string :state
