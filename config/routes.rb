@@ -11,11 +11,11 @@ Rails.application.routes.draw do
   post "/locations" => "locations#create"
   post "/flavors" => "flavors#create"
 
-  # Patch
-  patch "/locations/:id" => "locations#update"
-  patch "/flavors/:id" => "flavors#update"
+  # # Patch
+  # patch "/locations/:id" => "locations#update"
+  # patch "/flavors/:id" => "flavors#update"
 
-  # Delete
-  delete "/locations/:id" => "locations#destroy"
-  delete "/flavors/:id" => "flavors#destroy"
+  # # Delete
+  # delete "/locations/:id" => "locations#destroy"
+  # delete "/flavors/:id" => "flavors#destroy"
 end

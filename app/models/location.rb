@@ -1,5 +1,5 @@
 class Location < ApplicationRecord
-  has_many :location_flavors, foreign_key: "location_id", class_name: "LocationFlavor"
+  has_many :location_flavors
   has_many :flavors, through: :location_flavors
 
   # def image_url
