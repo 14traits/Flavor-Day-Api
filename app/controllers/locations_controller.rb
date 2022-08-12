@@ -6,7 +6,7 @@ class LocationsController < ApplicationController
   end
 
   def find_location
-    lo Location.find_by(id: params["id"])
+    location = Location.find_by(id: params["id"])
     render template: "locations/show"
   end
 
@@ -41,7 +41,7 @@ class LocationsController < ApplicationController
     @location.postal_code = params["postal_code"] || @location.postal_code
     @location.cl_id = params["cl_id"] || @location.cl_id
     @location.uid = params["uid"] || @location.uid
-    
+
     if @location.save
       render template: "locations/show"
     else
@@ -54,6 +54,4 @@ class LocationsController < ApplicationController
     location.destroy
     render json: { message: "Location was deleted!" }
   end
-end
-
 end

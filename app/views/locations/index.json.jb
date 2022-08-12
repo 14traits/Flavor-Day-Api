@@ -10,7 +10,7 @@
       postal_code: location.postal_code,
       cl_id: location.cl_id,
       uid: location.uid,
-      f_image: location.image_url,
-      f_name: location.name
+      flavor_image: location.image_url,
+      flavor_name: location.name
   }
 end

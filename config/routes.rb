@@ -1,6 +1,21 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :images, defaults: { format: :json }
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # Gets
+  get "/locations" => "locations#index"
+  get "/locations/:id", controller: "locations", action: "find_product"
+  get "/flavors" => "flavors#index"
+  get "/flavors/:id" => "flavors#show"
+
+  # Posts
+  post "/locations" => "locations#create"
+  post "/flavors" => "flavors#create"
+
+  # Patch
+  patch "/locations/:id" => "locations#update"
+  patch "/flavors/:id" => "flavors#update"
+
+  # Delete
+  delete "/locations/:id" => "locations#destroy"
+  delete "/flavors/:id" => "flavors#destroy"
 end
