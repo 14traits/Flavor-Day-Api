@@ -5,8 +5,8 @@ class LocationsController < ApplicationController
     render template: "locations/index"
   end
 
-  def find_location
-    location = Location.find_by(id: params["id"])
+  def show
+    @location = Location.find_by(id: params["id"])
     render template: "locations/show"
   end
 

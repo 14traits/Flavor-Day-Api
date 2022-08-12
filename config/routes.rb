@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # Gets
   get "/locations" => "locations#index"
-  get "/locations/:id", controller: "locations", action: "find_product"
+  get "/locations/:id", controller: "locations", action: "show"
   get "/flavors" => "flavors#index"
   get "/flavors/:id" => "flavors#show"
 
