@@ -8,10 +8,11 @@ RSpec.describe "api/v1/locations_controller", type: :request do
       parameter name: :location, in: :body, schema: {
         type: :object,
         properties: {
-          latitude: { type: :float },
-          longitude: { type: :float },
+          id: { type: :integer },
+          latitude: { type: :number, format: :float },
+          longitude: { type: :number, format: :float },
           title: { type: :string },
-          address: { type: :text },
+          address: { type: :string },
           city: { type: :string },
           state: { type: :string },
           postal_code: { type: :integer },
@@ -40,10 +41,11 @@ RSpec.describe "api/v1/locations_controller", type: :request do
       response "200", "name found" do
         schema type: :object,
           properties: {
-            latitude: { type: :float },
-            longitude: { type: :float },
+            id: { type: :integer },
+            latitude: { type: :number, format: :float },
+            longitude: { type: :number, format: :float },
             title: { type: :string },
-            address: { type: :text },
+            address: { type: :string },
             city: { type: :string },
             state: { type: :string },
             postal_code: { type: :integer },

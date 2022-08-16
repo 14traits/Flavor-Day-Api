@@ -21,14 +21,18 @@ paths:
             schema:
               type: object
               properties:
+                id:
+                  type: integer
                 latitude:
-                  type: float
+                  type: number
+                  format: float
                 longitude:
-                  type: float
+                  type: number
+                  format: float
                 title:
                   type: string
                 address:
-                  type: text
+                  type: string
                 city:
                   type: string
                 state:
@@ -61,14 +65,18 @@ paths:
               schema:
                 type: object
                 properties:
+                  id:
+                    type: integer
                   latitude:
-                    type: float
+                    type: number
+                    format: float
                   longitude:
-                    type: float
+                    type: number
+                    format: float
                   title:
                     type: string
                   address:
-                    type: text
+                    type: string
                   city:
                     type: string
                   state:
