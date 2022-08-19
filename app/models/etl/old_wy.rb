@@ -2,11 +2,7 @@ require "uri"
 require "net/http"
 require "openssl"
 require "json"
-
-# require_relative "../app/controllers/flavors_controller.rb"
-# require "../flavor.rb"
-#include FlavorsController
-require "../flavor"
+require "../models/flavor.rb"
 
 url = URI("https://hosted.where2getit.com/culvers/rest/locatorsearch?like=0.3297938445016556&lang=en_EN")
 
@@ -33,7 +29,8 @@ data = response.body
 
 data = JSON.parse(data)
 
-Flavor::load_data(data)
+return data
+# Flavor::load_data(data)
 
 # i = 0
 # data["response"]["collection"].each do
