@@ -36,6 +36,6 @@ module FlavorDayApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     #ActiveJob Adapter:
-    config.active_job.queue_adapter = :good_job
+    # config.active_job.queue_adapter = :good_jobgem
   end
 end

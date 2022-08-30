@@ -16,7 +16,8 @@ gem "puma", "~> 5.0"
 # gem "jbuilder"
 
 # Job Scheduler:
-gem 'good_job'
+gem 'whenever', :require => false
+#gem 'whenever/capistrano'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
