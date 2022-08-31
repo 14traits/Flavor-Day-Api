@@ -8,13 +8,13 @@ Rails.application.routes.draw do
   get "/locations/:id", controller: "locations", action: "show"
   get "/flavors" => "flavors#index"
   get "/flavors/:id" => "flavors#show"
-  get "/test" => "location_flavors#index"
+  # get "/test" => "location_flavors#index"
   # get "/location_flavors/:id" => "location_flavors#show"
 
   # Posts
   post "/locations" => "locations#create"
   post "/flavors" => "flavors#create"
-  post "/test" => "location_flavors#create"
+  # post "/test" => "location_flavors#create"
 
   # # Patch
   # patch "/locations/:id" => "locations#update"
