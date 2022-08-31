@@ -1,21 +1,24 @@
 class LocationFlavorsController < ApplicationController
-  # def index
-  #   @location_flavors = Location_flavor.all
-  #   render :index.as_json
-  # end
+  def index
+    @location_flavors = LocationFlavor.all
+    render :index.as_json
+  end
 
   # def show
-  #   @location_flavor = Location_flavor.find_by(id: params["id"])
+  #   @location_flavor = LocationFlavor.find_by(id: params["id"])
   #   render template: "location_flavors/show"
   # end
 
   def create
-    @location_flavor = Location_flavor.new(
+    @location_flavor = LocationFlavor.new(
       location_id: params["location_id"],
       flavor_id: params["flavor_id"],
     )
 
-    @location_flavor.save
-    render :show
+    if @location_flavor.save
+      render json: { message: "success" }
+    else
+      render json: { errors: @location_flavor.errors.full_messages }
+    end
   end
 end

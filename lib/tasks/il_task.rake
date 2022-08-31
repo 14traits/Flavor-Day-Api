@@ -1,4 +1,4 @@
-namespace :wy do
+namespace :il do
   desc "TODO"
   require "uri"
   require "net/http"
@@ -6,7 +6,7 @@ namespace :wy do
   require "json"
 
   task load_data: :environment do
-    url = URI("https://hosted.where2getit.com/culvers/rest/locatorsearch?like=0.3297938445016556&lang=en_EN")
+    url = URI("https://hosted.where2getit.com/culvers/rest/locatorsearch?like=0.020168546165184154&lang=en_EN")
 
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = true
@@ -23,7 +23,7 @@ namespace :wy do
     request["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15"
     request["Connection"] = "keep-alive"
     request["X-Requested-With"] = "XMLHttpRequest"
-    request.body = "{\"request\":{\"appkey\":\"1099682E-D719-11E6-A0C4-347BDEB8F1E5\",\"formdata\":{\"geoip\":false,\"dataview\":\"store_default\",\"geolocs\":{\"geoloc\":[{\"addressline\":\"Wyoming\",\"country\":\"US\",\"latitude\":43.0759678,\"longitude\":-107.2902839,\"state\":\"WY\",\"province\":\"\",\"city\":\"\",\"address1\":\"\",\"postalcode\":\"\"}]},\"searchradius\":\"25|50|100\",\"stateonly\":1,\"where\":{\"comingsoondate\":{\"eq\":\"null\"},\"or\":{\"number\":{\"eq\":\"\"},\"onlineorderstatus\":{\"eq\":\"\"}}},\"false\":\"0\"}}}"
+    request.body = "{\"request\":{\"appkey\":\"1099682E-D719-11E6-A0C4-347BDEB8F1E5\",\"formdata\":{\"geoip\":false,\"dataview\":\"store_default\",\"geolocs\":{\"geoloc\":[{\"addressline\":\"Illinois\",\"country\":\"US\",\"latitude\":40.6331249,\"longitude\":-89.3985283,\"state\":\"IL\",\"province\":\"\",\"city\":\"\",\"address1\":\"\",\"postalcode\":\"\"}]},\"searchradius\":\"25|50|100\",\"stateonly\":1,\"where\":{\"comingsoondate\":{\"eq\":\"null\"},\"or\":{\"number\":{\"eq\":\"\"},\"onlineorderstatus\":{\"eq\":\"\"}}},\"false\":\"0\"}}}"
 
     response = http.request(request)
     data = response.body
