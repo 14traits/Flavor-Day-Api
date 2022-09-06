@@ -24,7 +24,7 @@ Once you have your Dev/Testing server up (hint: `rails s`) visit [http://localho
 
 # Whenever Gem
 
-We use Postgres for our database. For a guide on getting started with Postgres, check out this [documentation](https://github.com/javan/whenever).
+We use the Whatever gem to pull from culvers API and feed our database. For a guide on getting started with Whatever Gem, check out this [documentation](https://github.com/javan/whenever).
 # README
 
 
