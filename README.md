@@ -30,24 +30,24 @@ We use the Whatever gem to pull from culvers API and feed our database. For a gu
 
 Things you may want to cover:
 
-1. Version's:
+1. **Version's:**
 - ruby "3.1.2"
 - rails "~> 7.0.3", ">= 7.0.3.1"
 - pg "~> 1.1"
 - puma "~> 5.0"
 
-2. Database creation
+2. **Database creation**
  - Work in progress
 
-3. Database initialization
+3. **Database initialization**
 - Work in progress
 
-4. How to run the test suite
+4. **How to run the test suite**
 - Work in progress
 
-5. Services (job queues, cache servers, search engines, etc.)
+5. **Services** (job queues, cache servers, search engines, etc.)
 - Whenever Gem running cron jobs
 
-6. Deployment instructions
+6. **Deployment instructions**
 - Work in progress
 
