@@ -49,5 +49,5 @@ Things you may want to cover:
 - Whenever Gem running cron jobs
 
 6. **Deployment instructions**
-- Work in progress
+- In theory
 
