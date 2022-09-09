@@ -53,5 +53,4 @@ group :development do
 end
 
 gem "jb"
-
 gem "rswag"
