@@ -5,10 +5,10 @@ ADD Gemfile.lock ./
 RUN apk update && apk upgrade --available && sync
 RUN apk add libpq-dev
 RUN apk --update add --virtual build-dependencies ruby-dev build-base && \
-  gem install bundler --no-ri --no-rdoc && \
-  # cd /app ; bundle install && \
-  cd /app ; bundle install --without develoepment test && \
-  apk del build-dependencies
+  gem install bundler --no-document
+#RUN bundle config set --local without development:test && \
+# apk del build-dependencies
+RUN bundle install
 ADD . /app
 ADD . /lib
 RUN chown -R nobody:nogroup /app
