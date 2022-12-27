@@ -90,7 +90,7 @@ GEM
     jb (0.8.0)
     json-schema (2.8.1)
       addressable (>= 2.4)
-    loofah (2.18.0)
+    loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
