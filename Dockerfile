@@ -1,5 +1,5 @@
 ### STAGE ONE: BUILD ###
-FROM ruby:3.1.2-alpine
+FROM ruby:3.2.2-alpine
 RUN apk update && apk upgrade --available && sync
 RUN apk add libpq-dev
 ADD Gemfile ./
