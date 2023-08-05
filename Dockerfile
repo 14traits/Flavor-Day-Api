@@ -1,5 +1,5 @@
 ### STAGE ONE: BUILD ###
-FROM ruby:3.18.0-alpine
+FROM ruby:alpine3.18
 RUN apk update && apk upgrade --available && sync
 RUN apk add libpq-dev
 ADD Gemfile ./
