@@ -4,7 +4,7 @@ info:
   title: API V1
   version: v1
 paths:
-  "/api/v1/locations":
+  "/locations":
     post:
       summary: Create an location
       tags:
@@ -46,7 +46,7 @@ paths:
               required:
               - title
               - postal_code
-  "/api/v1/locations/{id}":
+  "/locations/:{id}":
     get:
       summary: Retrieves a location
       tags:
@@ -92,7 +92,7 @@ paths:
         '404':
           description: location not found
 servers:
-- url: https://{defaultHost}
+- url: https://localhost:3000
   variables:
     defaultHost:
-      default: www.example.com
+      default: localhost:3000

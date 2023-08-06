@@ -11,11 +11,11 @@
 # update cron development: whenever --update-crontab --set environment='development'
 
 ## ENVIROMENTAL SETTINGS
-ENV.each_key do |key|
-  env key.to_sym, ENV[key]
-end
-# set :environment, "development"
-set :environment, ENV["RAILS_ENV"]
+# ENV.each_key do |key|
+#   env key.to_sym, ENV[key]
+# end
+set :environment, "development"
+# set :environment, ENV["RAILS_ENV"]
 
 # set :bundle_command, "/usr/local/bin/bundle exec"
 env :PATH, ENV["PATH"]

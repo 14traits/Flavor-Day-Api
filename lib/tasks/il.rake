@@ -23,11 +23,13 @@ namespace :il do
     request["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15"
     request["Connection"] = "keep-alive"
     request["X-Requested-With"] = "XMLHttpRequest"
-    request.body = "{\"request\":{\"appkey\":\"1099682E-D719-11E6-A0C4-347BDEB8F1E5\",\"formdata\":{\"geoip\":false,\"dataview\":\"store_default\",\"geolocs\":{\"geoloc\":[{\"addressline\":\"Illinois\",\"country\":\"US\",\"latitude\":40.6331249,\"longitude\":-89.3985283,\"state\":\"IL\",\"province\":\"\",\"city\":\"\",\"address1\":\"\",\"postalcode\":\"\"}]},\"searchradius\":\"25|50|100\",\"stateonly\":1,\"where\":{\"comingsoondate\":{\"eq\":\"null\"},\"or\":{\"number\":{\"eq\":\"\"},\"onlineorderstatus\":{\"eq\":\"\"}}},\"false\":\"0\"}}}"
+    request.body = "{\"request\":{\"appkey\":\"1099682E-D719-11E6-A0C4-347BDEB8F1E5\",\"formdata\":{\"geoip\":false,\"dataview\":\"store_default\",\"geolocs\":{\"geoloc\":[{\"addressline\":\"Illinois\",\"country\":\"US\",\"latitude\":40.6331249,\"longitude\":-89.3985283,\"state\":\"IL\",\"province\":\"\",\"city\":\"\",\"address1\":\"\",\"postalcode\":\"\"}]},\"searchradius\":\"25|50|100\",\"order\":\"_distance\",\"stateonly\":1,\"where\":{\"comingsoondate\":{\"eq\":\"\"},\"or\":{\"number\":{\"eq\":\"\"},\"onlineorderstatus\":{\"eq\":\"\"}}},\"proximitymethod\":\"drivetime\",\"distancefrom\":\"0.0001\",\"cutoff\":\"100\",\"cutoffuom\":\"mile\",\"false\":\"0\"}}}"
 
     response = http.request(request)
     data = response.body
     data = JSON.parse(data)
+
+
 
     f = 0
     l = 0
