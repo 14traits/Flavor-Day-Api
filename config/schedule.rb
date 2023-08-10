@@ -26,85 +26,85 @@ set :output, "./log/cron.log"
 # end
 
 # every 1.minutes do
-every 1.day, at: ["2:00 am"] do
+every 1.day, at: ["4:00 am"] do
   rake "db_work:daily_cleanup"
 end
 
-every 1.day, at: ["2:05 am"] do
+every 1.day, at: ["4:05 am"] do
   rake "al:load_data"
 end
-every 1.day, at: ["2:06 am"] do
+every 1.day, at: ["4:06 am"] do
   rake "ar:load_data"
 end
-every 1.day, at: ["2:07 am"] do
+every 1.day, at: ["4:07 am"] do
   rake "az:load_data"
 end
-every 1.day, at: ["2:08 am"] do
+every 1.day, at: ["4:08 am"] do
   rake "co:load_data"
 end
-every 1.day, at: ["2:09 am"] do
+every 1.day, at: ["4:09 am"] do
   rake "fl:load_data"
 end
-every 1.day, at: ["2:10 am"] do
+every 1.day, at: ["4:10 am"] do
   rake "ga:load_data"
 end
-every 1.day, at: ["2:11 am"] do
+every 1.day, at: ["4:11 am"] do
   rake "ia:load_data"
 end
-every 1.day, at: ["2:12 am"] do
+every 1.day, at: ["4:12 am"] do
   rake "id:load_data"
 end
-every 1.day, at: ["2:12 am"] do
+every 1.day, at: ["4:12 am"] do
   rake "il:load_data"
 end
-every 1.day, at: ["2:13 am"] do
+every 1.day, at: ["4:13 am"] do
   rake "in:load_data"
 end
-every 1.day, at: ["2:14 am"] do
+every 1.day, at: ["4:14 am"] do
   rake "ks:load_data"
 end
-every 1.day, at: ["2:15 am"] do
+every 1.day, at: ["4:15 am"] do
   rake "ky:load_data"
 end
-every 1.day, at: ["2:16 am"] do
+every 1.day, at: ["4:16 am"] do
   rake "mi:load_data"
 end
-every 1.day, at: ["2:17 am"] do
+every 1.day, at: ["4:17 am"] do
   rake "mn:load_data"
 end
-every 1.day, at: ["2:18 am"] do
+every 1.day, at: ["4:18 am"] do
   rake "mo:load_data"
 end
-every 1.day, at: ["2:19 am"] do
+every 1.day, at: ["4:19 am"] do
   rake "nc:load_data"
 end
-every 1.day, at: ["2:20 am"] do
+every 1.day, at: ["4:20 am"] do
   rake "nd:load_data"
 end
-every 1.day, at: ["2:21 am"] do
+every 1.day, at: ["4:21 am"] do
   rake "ne:load_data"
 end
-every 1.day, at: ["2:22 am"] do
+every 1.day, at: ["4:22 am"] do
   rake "oh:load_data"
 end
-every 1.day, at: ["2:23 am"] do
+every 1.day, at: ["4:23 am"] do
   rake "sc:load_data"
 end
-every 1.day, at: ["2:24 am"] do
+every 1.day, at: ["4:24 am"] do
   rake "sd:load_data"
 end
-every 1.day, at: ["2:25 am"] do
+every 1.day, at: ["4:25 am"] do
   rake "tn:load_data"
 end
-every 1.day, at: ["2:26 am"] do
+every 1.day, at: ["4:26 am"] do
   rake "tx:load_data"
 end
-every 1.day, at: ["2:27 am"] do
+every 1.day, at: ["4:27 am"] do
   rake "ut:load_data"
 end
-every 1.day, at: ["2:28 am"] do
+every 1.day, at: ["4:28 am"] do
   rake "wi:load_data"
 end
-every 1.day, at: ["2:29 am"] do
+every 1.day, at: ["4:29 am"] do
   rake "wy:load_data"
 end
