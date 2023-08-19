@@ -14,8 +14,8 @@ test:
   <<: *default
   database: flavor_day_api_test
 
-# production:
-#   <<: *default
-#   database: flavor_day_api_production
-#   username: flavor_day_api
-#   password: <%= ENV["FLAVOR_DAY_API_DATABASE_PASSWORD"] %>
+production:
+  <<: *default
+  database: flavor_day_api_production
+  username: flavor_day
+  password: <%= ENV["FLAVOR_DAY_API_DATABASE_PASSWORD"] %>
