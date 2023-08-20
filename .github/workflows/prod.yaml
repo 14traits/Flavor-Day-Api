@@ -25,4 +25,5 @@ jobs:
       with:
         context: . 
         push: true
-        tags: 14traits/flavorday-api:v.0.1
+        tags: ${{ steps.docker_meta.outputs.tags }}
+        labels: ${{ steps.docker_meta.outputs.labels }}
