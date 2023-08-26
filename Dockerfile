@@ -5,7 +5,7 @@ RUN apk add \
 COPY Gemfile* .
 #RUN bundle install --without development test
 ENV BUNDLER_WITHOUT development test
-RUN bundle install
+RUN bundle install --deployment
 FROM ruby:alpine3.18 AS runner
 RUN apk add \
   tzdata \
