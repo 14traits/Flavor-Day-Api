@@ -4,7 +4,11 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Setting for url deployment location:
-  config.action_controller.default_url_options = { host: 'api.flavorday.app' }
+  config.hosts = [
+    "api.flavorday.app"
+   ]
+  #config.action_controller.default_url_options = { host: 'api.flavorday.app' }
+  
   # Code is not reloaded between requests.
   config.cache_classes = true
 
