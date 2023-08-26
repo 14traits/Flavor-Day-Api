@@ -2,6 +2,9 @@ FROM ruby:alpine3.18 AS builder
 RUN apk add \
   build-base \
   postgresql-dev
+ENV RAILS_ENV="production" 
+#\
+#    BUNDLE_WITHOUT="development"
 COPY Gemfile* .
 RUN bundle install 
 FROM ruby:alpine3.18 AS runner
