@@ -3,7 +3,7 @@ RUN apk add \
   build-base \
   postgresql-dev
 COPY Gemfile* .
-RUN bundle install -- without development test
+RUN bundle install --without development test
 FROM ruby:alpine3.18 AS runner
 RUN apk add \
   tzdata \
