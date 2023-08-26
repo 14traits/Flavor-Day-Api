@@ -8,6 +8,7 @@
 /.bundle
 # Ignore vscode spelling config.
 /.vscode
+/.Dockerfile-Old
 
 
 docker-compose.yml

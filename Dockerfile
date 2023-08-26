@@ -1,25 +1,18 @@
-### STAGE ONE: BUILD ###
-FROM ruby:alpine3.18
-RUN apk update && apk upgrade --available && sync
-RUN apk add libpq-dev
-ADD Gemfile ./
-ADD Gemfile.lock ./
-RUN apk --update add --virtual build-dependencies ruby-dev build-base && \
-  gem install bundler --no-document
-#RUN bundle config set --local without development:test && \
-# apk del build-dependencies
-RUN apk update \
-  && apk add build-base \
-  tzdata
-ADD . /app
-ADD . /lib
+FROM ruby:alpine3.18 AS builder
+RUN apk add \
+  build-base \
+  postgresql-dev
+COPY Gemfile* .
 RUN bundle install
-# RUN chown -R nobody:nogroup /app
-# USER nobody
-ENV PORT 3000
-EXPOSE 3000
-
+FROM ruby:alpine3.18 AS runner
+RUN apk add \
+  tzdata \
+  nodejs \
+  postgresql-dev
 WORKDIR /app
-# CMD bundle exec whenever --update-crontab && cron -f
+# We copy over the entire gems directory for our builder image, containing the already built artifact
+COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
+COPY . .
+EXPOSE 3000
 RUN bundle exec whenever -i 
-CMD rails s 
+CMD ["rails", "server", "-b", "0.0.0.0"]
