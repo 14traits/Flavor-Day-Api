@@ -26,6 +26,6 @@ RUN bundle config set --local without 'development test' && \
   bundle config set --local path /rubygems
 EXPOSE 3000
 RUN bundle exec whenever -i 
-CMD ["bundle", "rails", "s", "-b",  "0.0.0.0"]
+CMD ["rails", "s", "-b",  "0.0.0.0"]
 #ENV RAILS_ENV=production
 #RUN bundle exec rails assets:precompile
