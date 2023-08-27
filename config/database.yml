@@ -17,5 +17,7 @@ test:
 production:
   <<: *default
   database: flavor_day_api_production
+  host: postgres
+  port: 5432
   username: flavor_day
   password: <%= ENV["FLAVOR_DAY_API_DATABASE_PASSWORD"] %>
