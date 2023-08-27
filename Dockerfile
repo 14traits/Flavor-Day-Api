@@ -13,7 +13,8 @@ RUN apk update \
 
 ADD . /app
 ADD . /lib
-
+RUN bundle config set --local without 'development test' && \
+  bundle config set --local path /rubygems
 RUN bundle install
 
 ENV PORT 3000
