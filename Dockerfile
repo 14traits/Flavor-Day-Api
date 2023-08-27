@@ -1,9 +1,8 @@
 # Stage 1: Build
 FROM ruby:alpine3.18 as builder
-RUN apk update && apk upgrade --available && sync \
-  build-base \
-  postgresql-dev
-COPY Gemfile* .
+RUN apk update && apk upgrade --available && sync
+ADD Gemfile ./
+ADD Gemfile.lock ./
 RUN bundle install
 
 # Stage 2: Devlop Local 
