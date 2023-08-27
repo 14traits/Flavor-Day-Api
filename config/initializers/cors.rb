@@ -7,9 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "localhost:8080",
-            "api.flavorday.app:3000",
-            "167.172.140.210:3000"
+    origins "localhost:8080", /https*:\/\/.*?flavorday\.app/
 
     resource "*",
       headers: :any,
