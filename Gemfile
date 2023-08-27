@@ -12,18 +12,8 @@ gem "pg", "~> 1.5"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.6"
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-# gem "jbuilder"
-
 # Job Scheduler:
 gem 'whenever', :require => false
-#gem 'whenever/capistrano'
-
-# Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
-
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -42,12 +32,14 @@ gem "bootsnap", require: false
 gem "rack-cors"
 gem "jb"
 
+# Swagger
+gem "rswag"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "rspec-rails"
   gem "rswag-specs"
-  gem "rswag"
 end
 
 group :development do
