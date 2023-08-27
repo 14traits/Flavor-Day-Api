@@ -26,8 +26,8 @@ COPY --from=prod-build /lib /lib
 RUN bundle config set --local without 'development test' && \
   bundle config set --local path /rubygems
 EXPOSE 3000
-RUN bundle install
+#RUN bundle install
 RUN bundle exec whenever -i 
-CMD ["rails", "s", "-b",  "0.0.0.0"]
+CMD ["bundle" "rails", "s", "-b",  "0.0.0.0"]
 #ENV RAILS_ENV=production
 #RUN bundle exec rails assets:precompile
