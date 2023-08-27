@@ -3,21 +3,17 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV['POSTGRES_HOST'] %>
+  port: 5432
+  database: <%= ENV['POSTGRES_DB'] %>
+  user: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 development:
   <<: *default
-  database: flavor_day_api_development
-  host: localhost
-  port: 5432
 
 test:
   <<: *default
-  database: flavor_day_api_test
 
 production:
   <<: *default
-  database: flavor_day_api_production
-  host: postgres
-  port: 5432
-  username: flavor_day
-  password: <%= ENV["FLAVOR_DAY_API_DATABASE_PASSWORD"] %>
