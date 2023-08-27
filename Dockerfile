@@ -1,6 +1,6 @@
 # Stage 1: Build
 FROM ruby:alpine3.18 as builder
-RUN apk add \
+RUN apk update && apk upgrade --available && sync \
   build-base \
   postgresql-dev
 COPY Gemfile* .
@@ -21,13 +21,13 @@ FROM ruby:alpine3.18 as prod
 RUN mkdir /app
 WORKDIR /app
 COPY --from=prod-build . .
-#COPY --from=prod-build /app /app
+COPY --from=prod-build /app /app
 #COPY --from=prod-build /rubygems /rubygems
-#COPY --from=prod-build /lib /lib
+COPY --from=prod-build /lib /lib
 RUN bundle config set --local without 'development test' && \
   bundle config set --local path /rubygems
-EXPOSE 3000
 RUN bundle install
+EXPOSE 3000
 RUN bundle exec whenever -i 
 CMD ["rails", "s", "-b",  "0.0.0.0"]
 #CMD ["bundle" "rails", "s", "-b",  "0.0.0.0"]
