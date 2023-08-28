@@ -7,10 +7,10 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "localhost:8080", "https:flavorday.app:3000"
-    #origins "*"
+    #origins "localhost:8080", "https:flavorday.app:3000"
+    origins "*"
 
-    resource "api/*",
+    resource "*",
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
