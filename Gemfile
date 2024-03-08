@@ -1,17 +1,17 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.2"
+ruby "3.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 # gem "rails", "~> 7.0.6", ">= 7.0.5.1"
-gem "rails", "~> 7.0.7.1"
+gem "rails", "~> 7.0.7.2"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.5"
+gem "pg", "~> 1.5.3"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.6"
+gem "puma", "~> 5.6.7"
 
 # Job Scheduler:
 gem 'whenever', :require => false
